@@ -6,5 +6,10 @@
         {
             function(message);
         }
+
+        public void Add(dynamic source, dynamic destination)
+        {
+            destination.computedResult = source.value1 + source.value2;
+        }
     }
 }

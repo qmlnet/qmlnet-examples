@@ -24,6 +24,20 @@ ScrollablePage {
             }
         }
         
+        Button {
+            text: 'Perform math with raw JS objects.'
+            onClicked: {
+                var source = {
+                    value1: 54,
+                    value2: 36
+                }
+                var result = {
+                }
+                model.add(source, result)
+                message.text = 'Result: ' + result.computedResult
+            }
+        }
+        
         Text {
             id: message
         }
