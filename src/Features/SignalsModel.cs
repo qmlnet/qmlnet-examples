@@ -8,7 +8,7 @@ namespace Features
     {
         public void RaiseSignal()
         {
-            this.ActivateSignal("customSignal", $"Signal was raised at {DateTime.Now.ToLongTimeString()}");
+            this.ActivateSignal("customSignal", $"Signal was raised from .NET at {DateTime.Now.ToLongTimeString()}");
         }
     }
 }
