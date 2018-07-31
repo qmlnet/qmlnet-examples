@@ -101,6 +101,7 @@ ApplicationWindow {
 
             model: ListModel {
                 ListElement { title: "Signals"; source: "pages/Signals.qml" }
+                ListElement { title: "Notify signals"; source: "pages/NotifySignals.qml" }
             }
 
             ScrollIndicator.vertical: ScrollIndicator { }

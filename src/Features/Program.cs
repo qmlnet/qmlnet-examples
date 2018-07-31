@@ -15,6 +15,7 @@ namespace Features
                 using (var qmlEngine = new QQmlApplicationEngine())
                 {
                     QQmlApplicationEngine.RegisterType<SignalsModel>("Features");
+                    QQmlApplicationEngine.RegisterType<NotifySignalsModel>("Features");
                     
                     qmlEngine.Load("Main.qml");
                     
