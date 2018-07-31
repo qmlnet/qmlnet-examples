@@ -18,6 +18,7 @@ namespace Features
                     QQmlApplicationEngine.RegisterType<NotifySignalsModel>("Features");
                     QQmlApplicationEngine.RegisterType<AsyncAwaitModel>("Features");
                     QQmlApplicationEngine.RegisterType<NetObjectsModel>("Features");
+                    QQmlApplicationEngine.RegisterType<DynamicModel>("Features");
                     
                     qmlEngine.Load("Main.qml");
                     
