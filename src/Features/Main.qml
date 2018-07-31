@@ -103,6 +103,7 @@ ApplicationWindow {
                 ListElement { title: "Signals"; source: "pages/Signals.qml" }
                 ListElement { title: "Notify signals"; source: "pages/NotifySignals.qml" }
                 ListElement { title: "Async/await"; source: "pages/AsyncAwait.qml" }
+                ListElement { title: ".NET objects"; source: "pages/NetObjects.qml" }
             }
 
             ScrollIndicator.vertical: ScrollIndicator { }

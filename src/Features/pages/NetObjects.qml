@@ -12,17 +12,15 @@ ScrollablePage {
             width: parent.width
             wrapMode: Label.Wrap
             horizontalAlignment: Qt.AlignHCenter
-            text: "Tasks can be invoked and awaited from Qml. Continuations happen on Qt's main thread."
+            text: "Any .NET reference can be used in Qml, even ones not explicitly registered. Extensive unit tests ensure proper garbage collection."
         }
 
         Button {
-            text: 'Call async method'
+            text: 'Play with .NET object'
             onClicked: {
-                message.text = 'Processing...'
-                var task = model.runAsyncTask('Hello from qml: ' + new Date())
-                Net.await(task, function(result) {
-                    message.text = result
-                })
+                var netObject = model.getNetObject()
+                netObject.updateProperty('Hello! ' + new Date())
+                message.text = netObject.property
             }
         }
         
@@ -30,7 +28,7 @@ ScrollablePage {
             id: message
         }
         
-        AsyncAwaitModel {
+        NetObjectsModel {
             id: model
         }
     }
