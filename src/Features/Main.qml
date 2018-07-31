@@ -2,8 +2,6 @@ import QtQuick 2.9
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.3
 import QtQuick.Controls.Material 2.1
-import QtQuick.Controls.Universal 2.1
-import Qt.labs.settings 1.0
 
 ApplicationWindow {
     id: window
@@ -12,10 +10,9 @@ ApplicationWindow {
     visible: true
     title: "Qml.Net"
 
-    Settings {
-        id: settings
-        property string style: "Default"
-    }
+    Material.theme: Material.Light
+    Material.accent: '#41cd52'
+    Material.primary: '#41cd52'
 
     Shortcut {
         sequences: ["Esc", "Back"]
