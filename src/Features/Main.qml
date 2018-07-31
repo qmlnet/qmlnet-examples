@@ -102,6 +102,7 @@ ApplicationWindow {
             model: ListModel {
                 ListElement { title: "Signals"; source: "pages/Signals.qml" }
                 ListElement { title: "Notify signals"; source: "pages/NotifySignals.qml" }
+                ListElement { title: "Async/await"; source: "pages/AsyncAwait.qml" }
             }
 
             ScrollIndicator.vertical: ScrollIndicator { }
