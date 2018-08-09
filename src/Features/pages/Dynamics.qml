@@ -12,7 +12,7 @@ ScrollablePage {
             width: parent.width
             wrapMode: Label.Wrap
             horizontalAlignment: Qt.AlignHCenter
-            text: 'Mutable JS objects can be sent to .NET to be interacted with, using the ""dyamic"" type'
+            text: 'Mutable JS objects can be sent to .NET to be interacted with, using the ""dynamic"" type'
         }
 
         Button {
