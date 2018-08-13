@@ -19,7 +19,8 @@ namespace Features
                     QQmlApplicationEngine.RegisterType<AsyncAwaitModel>("Features");
                     QQmlApplicationEngine.RegisterType<NetObjectsModel>("Features");
                     QQmlApplicationEngine.RegisterType<DynamicModel>("Features");
-                    
+                    QQmlApplicationEngine.RegisterType<CalculatorModel>("Features");
+
                     qmlEngine.Load("Main.qml");
                     
                     return application.Exec();
