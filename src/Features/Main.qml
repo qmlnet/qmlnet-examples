@@ -106,6 +106,7 @@ ApplicationWindow {
                 ListElement { title: ".NET objects"; source: "pages/NetObjects.qml" }
                 ListElement { title: "Dynamics"; source: "pages/Dynamics.qml" }
                 ListElement { title: "Simple calculator"; source: "pages/Calculator.qml" }
+                ListElement { title: "Collections"; source: "pages/Collections.qml" }
             }
 
             ScrollIndicator.vertical: ScrollIndicator { }

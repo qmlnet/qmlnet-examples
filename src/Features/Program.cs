@@ -20,6 +20,7 @@ namespace Features
                     QQmlApplicationEngine.RegisterType<NetObjectsModel>("Features");
                     QQmlApplicationEngine.RegisterType<DynamicModel>("Features");
                     QQmlApplicationEngine.RegisterType<CalculatorModel>("Features");
+                    QQmlApplicationEngine.RegisterType<CollectionsModel>("Features");
 
                     qmlEngine.Load("Main.qml");
                     
