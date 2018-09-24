@@ -14,13 +14,13 @@ namespace Features
             {
                 using (var qmlEngine = new QQmlApplicationEngine())
                 {
-                    QQmlApplicationEngine.RegisterType<SignalsModel>("Features");
-                    QQmlApplicationEngine.RegisterType<NotifySignalsModel>("Features");
-                    QQmlApplicationEngine.RegisterType<AsyncAwaitModel>("Features");
-                    QQmlApplicationEngine.RegisterType<NetObjectsModel>("Features");
-                    QQmlApplicationEngine.RegisterType<DynamicModel>("Features");
-                    QQmlApplicationEngine.RegisterType<CalculatorModel>("Features");
-                    QQmlApplicationEngine.RegisterType<CollectionsModel>("Features");
+                    Qml.RegisterType<SignalsModel>("Features");
+                    Qml.RegisterType<NotifySignalsModel>("Features");
+                    Qml.RegisterType<AsyncAwaitModel>("Features");
+                    Qml.RegisterType<NetObjectsModel>("Features");
+                    Qml.RegisterType<DynamicModel>("Features");
+                    Qml.RegisterType<CalculatorModel>("Features");
+                    Qml.RegisterType<CollectionsModel>("Features");
 
                     qmlEngine.Load("Main.qml");
                     
