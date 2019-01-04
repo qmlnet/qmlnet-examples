@@ -33,7 +33,7 @@ ScrollablePage {
             text: "Add contact"
             onClicked: {
                 if(collectionsModel.addContact(name.text, phoneNumber.text)) {
-                    repeater.model = Net.toJsArray(collectionsModel.contacts)
+                    repeater.model = Net.toListModel(collectionsModel.contacts)
                     name.text = null
                     phoneNumber.text = null
                 }
@@ -53,7 +53,7 @@ ScrollablePage {
                     text: "Remove"
                     onClicked: {
                          collectionsModel.removeContact(index)
-                         repeater.model = Net.toJsArray(collectionsModel.contacts)
+                         repeater.model = Net.toListModel(collectionsModel.contacts)
                     }
                 }
              }
@@ -66,7 +66,7 @@ ScrollablePage {
         CollectionsModel {
             id: collectionsModel
             Component.onCompleted: {
-                repeater.model = Net.toJsArray(collectionsModel.contacts)
+                repeater.model = Net.toListModel(collectionsModel.contacts)
             }
         }
     }
