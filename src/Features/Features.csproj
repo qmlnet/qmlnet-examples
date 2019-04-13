@@ -8,9 +8,9 @@
     <None Remove="**\*.qmlc" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Qml.Net" Version="0.8.0-alpha.55" />
-    <PackageReference Include="Qml.Net.LinuxBinaries" Version="0.8.0-alpha.55" />
-    <PackageReference Include="Qml.Net.OSXBinaries" Version="0.8.0-alpha.55" />
-    <PackageReference Include="Qml.Net.WindowsBinaries" Version="0.8.0-alpha.55" />
+    <PackageReference Include="Qml.Net" Version="0.8.0" />
+    <PackageReference Include="Qml.Net.LinuxBinaries" Version="0.8.0" />
+    <PackageReference Include="Qml.Net.OSXBinaries" Version="0.8.0" />
+    <PackageReference Include="Qml.Net.WindowsBinaries" Version="0.8.0" />
   </ItemGroup>
 </Project>
