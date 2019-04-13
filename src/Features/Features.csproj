@@ -13,4 +13,9 @@
     <PackageReference Include="Qml.Net.OSXBinaries" Version="0.8.0" />
     <PackageReference Include="Qml.Net.WindowsBinaries" Version="0.8.0" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\**" CopyToPublishDirectory="Always" />
+    <Content Include="pages\**" CopyToPublishDirectory="Always" />
+    <Content Include="Main.qml" CopyToPublishDirectory="Always" />
+  </ItemGroup>
 </Project>
