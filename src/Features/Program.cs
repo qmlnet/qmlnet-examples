@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Runtime.InteropServices;
 using Qml.Net;
 using Qml.Net.Runtimes;
 
@@ -7,29 +8,19 @@ namespace Features
 {
     class Program
     {
+        [DllImport("QmlNet")]
+        internal static extern long qml_net_getVersion();
+
         static int Main(string[] args)
         {
+            // This is need to prep Qt runtime that QmlNet.dll depends on.
+            // It is required, but it is irrelvant to the issue we are experiencing.
             RuntimeManager.DiscoverOrDownloadSuitableQtRuntime();
-            
-            QQuickStyle.SetStyle("Material");
 
-            using (var application = new QGuiApplication(args))
-            {
-                using (var qmlEngine = new QQmlApplicationEngine())
-                {
-                    Qml.Net.Qml.RegisterType<SignalsModel>("Features");
-                    Qml.Net.Qml.RegisterType<NotifySignalsModel>("Features");
-                    Qml.Net.Qml.RegisterType<AsyncAwaitModel>("Features");
-                    Qml.Net.Qml.RegisterType<NetObjectsModel>("Features");
-                    Qml.Net.Qml.RegisterType<DynamicModel>("Features");
-                    Qml.Net.Qml.RegisterType<CalculatorModel>("Features");
-                    Qml.Net.Qml.RegisterType<CollectionsModel>("Features");
+            // The following works on netcoreapp2.2, but not on 4.7.2.
+            Console.WriteLine(qml_net_getVersion());
 
-                    qmlEngine.Load("Main.qml");
-                    
-                    return application.Exec();
-                }
-            }
+            return 0;
         }
     }
 }
