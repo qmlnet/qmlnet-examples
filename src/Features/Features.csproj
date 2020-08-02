@@ -1,17 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <RunWorkingDirectory>$(MSBuildProjectDirectory)</RunWorkingDirectory>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="**\*.qmlc" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Qml.Net" Version="0.10.1" />
-    <PackageReference Include="Qml.Net.LinuxBinaries" Version="0.10.1" />
-    <PackageReference Include="Qml.Net.OSXBinaries" Version="0.10.1" />
-    <PackageReference Include="Qml.Net.WindowsBinaries" Version="0.10.1" />
+    <PackageReference Include="Qml.Net" Version="0.11.0" />
+    <PackageReference Include="Qml.Net.LinuxBinaries" Version="0.11.0" />
+    <PackageReference Include="Qml.Net.OSXBinaries" Version="0.11.0" />
+    <PackageReference Include="Qml.Net.WindowsBinaries" Version="0.11.0" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\**" CopyToPublishDirectory="Always" />
