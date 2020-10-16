@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="SignalsModel.fs" />
+    <Compile Include="NotifySignalsModel.fs" />
+    <Compile Include="AsyncAwaitModel.fs" />
+    <Compile Include="NetObjectsModel.fs" />
+    <Compile Include="DynamicModel.fs" />
+    <Compile Include="CalculatorModel.fs" />
+    <Compile Include="CollectionsModel.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="FSharp.Interop.Dynamic" Version="5.0.1.268" />
+    <PackageReference Include="Qml.Net" Version="0.11.0" />
+    <PackageReference Include="Qml.Net.LinuxBinaries" Version="0.11.0" />
+    <PackageReference Include="Qml.Net.OSXBinaries" Version="0.11.0" />
+    <PackageReference Include="Qml.Net.WindowsBinaries" Version="0.11.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Features.Common\Features.Common.csproj" />
+  </ItemGroup>
+</Project>

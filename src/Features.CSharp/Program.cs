@@ -10,7 +10,7 @@ namespace Features
         static int Main(string[] args)
         {
             RuntimeManager.DiscoverOrDownloadSuitableQtRuntime();
-            
+
             QQuickStyle.SetStyle("Material");
 
             using (var application = new QGuiApplication(args))
@@ -25,6 +25,8 @@ namespace Features
                     Qml.Net.Qml.RegisterType<CalculatorModel>("Features");
                     Qml.Net.Qml.RegisterType<CollectionsModel>("Features");
 
+                    string binaryPath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
+                    Directory.SetCurrentDirectory(binaryPath);
                     qmlEngine.Load("Main.qml");
                     
                     return application.Exec();
