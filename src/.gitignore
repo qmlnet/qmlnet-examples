@@ -329,3 +329,7 @@ ASALocalRun/
 .mfractor/
 
 **/*.qmlc
+
+# VS Code
+.ionide
+.vscode

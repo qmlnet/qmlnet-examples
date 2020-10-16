@@ -14,8 +14,6 @@
     <PackageReference Include="Qml.Net.WindowsBinaries" Version="0.11.0" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="images\**" CopyToPublishDirectory="Always" />
-    <Content Include="pages\**" CopyToPublishDirectory="Always" />
-    <Content Include="Main.qml" CopyToPublishDirectory="Always" />
+    <ProjectReference Include="..\Features.Common\Features.Common.csproj" />
   </ItemGroup>
 </Project>
